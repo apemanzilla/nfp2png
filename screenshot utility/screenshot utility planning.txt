@@ -1,0 +1,15 @@
+-- Screenshot Utility Installer/Launcher --
+(Steps marked with a '-' are only run the first time, not subsequent times)
+1-. Moves existing startup file to startup2
+2-. Copies self to startup file
+3-. Reads window API to string
+4-. Patches in "window.getData" function using string matching (Returns tLines)
+5-. Saves new window API to file
+6-. Reboots PC
+7. Loads new window API
+8. Overrides term.native to prevent problems when restoring terminal
+9. Loads startup2 file (or multishell if no startup2 file) into coroutine, sandboxed with a patched window
+10a. Creates coroutine that watches for "Ctrl + P" or similar key-combos, then uses patched "window.getData" function to read data from other coroutine window into file.
+10b. Submits window data to pastebin, formatted as a Sketch file (to support text)
+10c. Pauses other coroutine, displays popup box with paste ID, and waits for user to click "OK"
+11. Redraws and resumes other coroutine.
