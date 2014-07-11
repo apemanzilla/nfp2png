@@ -1,0 +1,2 @@
+RewriteEngine On 
+RewriteRule ^convert.png index.php [L]
