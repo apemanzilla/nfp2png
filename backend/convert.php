@@ -102,6 +102,6 @@
 			imagedestroy($img);
 			exit();
 		default:
-			die("Invalid parser version: " . $_GET["parserversion"]);
+			die("Invalid parser version: " . $_GET["parserversion"] ?: "(null)");
 	}
 ?>

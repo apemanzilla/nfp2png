@@ -1,0 +1,27 @@
+@font-face {
+	font-family:"RobotoLight";
+	src:url("Roboto-Light.eot");
+	src:url("Roboto-Light.ttf") format("truetype"),
+	url("Roboto-Light.woff") format("woff");
+}
+
+body {
+	font-family:"RobotoLight";
+}
+
+.centered {
+	width:500px;
+	height:250px;
+	background-color:#d9d9d9;
+	position:fixed;
+	margin-left:-250px; /* half of width */
+	margin-top:-125px;  /* half of height */
+	top:50%;
+	left:50%;
+}
+
+.table-centered {
+	border-radius: 25px;
+	text-align:center; 
+	vertical-align:middle;
+}
